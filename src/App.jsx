@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import NewEmployeePage from "./pages/NewEmployeePage";
-import EmployeesPage from "./pages/EmployeesPage";
+import CurrentEmployeesPage from "./pages/CurrentEmployeesPage";
 import ErrorPage from "./pages/ErrorPage";
 
 function App() {
@@ -11,12 +10,8 @@ function App() {
       element: <HomePage />,
     },
     {
-      path: "/new-employee",
-      element: <NewEmployeePage />,
-    },
-    {
-      path: "/employees",
-      element: <EmployeesPage />,
+      path: "/current-employees",
+      element: <CurrentEmployeesPage />,
     },
     {
       path: "*",

@@ -1,9 +1,9 @@
-function HomePage() {
+function CreateEmployeePage() {
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>Create Employee</h1>
     </div>
   );
 }
 
-export default HomePage;
+export default CreateEmployeePage;
