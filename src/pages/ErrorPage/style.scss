@@ -1,0 +1,20 @@
+.error-page {
+  text-align: center;
+
+  .error-page-title {
+    padding-top: 20px;
+    font-size: 2rem;
+  }
+
+  .error-page-message {
+    font-size: 1.8rem;
+  }
+
+  .error-page-link {
+    font-size: 1.6rem;
+
+    &:visited {
+      color: inherit;
+    }
+  }
+}

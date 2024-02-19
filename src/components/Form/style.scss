@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 30px;
+
+  .form-submit {
+    width: 230px;
+    background-color: #1669c4;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+  }
+}

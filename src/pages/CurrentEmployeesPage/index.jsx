@@ -1,10 +1,11 @@
 import Header from "../../components/Header";
+import "./style.scss";
 
 function CurrentEmployeesPage() {
   return (
-    <div>
+    <div className="employees-page">
       <Header />
-      <h1>Current Employees</h1>
+      <h1 className="employees-page-title">Current Employees</h1>
     </div>
   );
 }
