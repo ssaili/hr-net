@@ -1,58 +1,30 @@
-.input-container {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  .input-label {
-    color: #333333;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-
-  .input-field {
-    width: 200px;
-    padding: 15px;
-    border-radius: 15px;
-    border: 1px solid #e5e5e5;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
-  }
-}
-
-.date-container {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  .date-label {
-    color: #333333;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-
-  .date-field {
-    width: 200px;
-    border-radius: 15px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
-    border: 1px solid #e5e5e5;
-    padding: 15px;
-    border-radius: 15px;
-  }
-}
-
+.input-container,
+.date-container,
 .select-container {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 
+  .input-label,
+  .date-label,
   .select-label {
     color: #333333;
     font-size: 1rem;
     font-weight: bold;
   }
 
+  .input-field,
+  .date-field {
+    width: 200px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.select-container {
   .select-field {
     width: 232px;
     border-radius: 15px;
