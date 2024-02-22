@@ -1,7 +1,15 @@
 .employees-page {
   .employees-page-title {
-    padding-top: 20px;
+    margin-top: 30px;
     font-size: 2rem;
     text-align: center;
+  }
+
+  .employees-page-table {
+    margin: 40px;
+
+    @media screen and (max-width: 768px) {
+      margin-inline: 10px;
+    }
   }
 }
