@@ -31,7 +31,7 @@ function Input({ label, type, name, options, onInputChange }) {
         }
         break;
       default:
-        if (event && event.target) {
+        if (event?.target) {
           const inputValue = event.target.value;
           updateInputValue(inputValue);
         }
