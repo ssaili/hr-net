@@ -3,8 +3,15 @@ import "./style.scss";
 import Input from "../Input";
 import departments from "../../data/departments";
 import states from "../../data/states";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { addEmployee } from "../../features/employees/employeesSlice";
 
 function Form() {
+  const dispatch = useDispatch();
+
+  const employees = useSelector((state) => state.employees);
+
   const [inputValues, setInputValues] = useState({
     firstName: "",
     lastName: "",
@@ -26,7 +33,9 @@ function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    dispatch(addEmployee(inputValues));
     console.log(inputValues);
+    console.log(employees);
   };
 
   return (
