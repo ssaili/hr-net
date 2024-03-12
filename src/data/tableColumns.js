@@ -10,19 +10,24 @@ const employeeColumns = [
     size: 100,
   },
   {
-    accessorKey: "dateOfBirth",
-    header: "Date of Birth",
-    size: 100,
-  },
-  {
     accessorKey: "startDate",
     header: "Start Date",
     size: 100,
   },
   {
+    accessorKey: "department",
+    header: "Department",
+    size: 100,
+  },
+  {
+    accessorKey: "dateOfBirth",
+    header: "Date of Birth",
+    size: 100,
+  },
+  {
     accessorKey: "street",
     header: "Street",
-    size: 150,
+    size: 200,
   },
   {
     accessorKey: "city",
@@ -37,11 +42,6 @@ const employeeColumns = [
   {
     accessorKey: "zipCode",
     header: "Zip Code",
-    size: 100,
-  },
-  {
-    accessorKey: "department",
-    header: "Department",
     size: 100,
   },
 ];
