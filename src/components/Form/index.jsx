@@ -4,13 +4,10 @@ import Input from "../Input";
 import departments from "../../data/departments";
 import states from "../../data/states";
 import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 import { addEmployee } from "../../features/employees/employeesSlice";
 
 function Form() {
   const dispatch = useDispatch();
-
-  const employees = useSelector((state) => state.employees);
 
   const [inputValues, setInputValues] = useState({
     firstName: "",
@@ -24,33 +21,44 @@ function Form() {
     department: "",
   });
 
+  const [errorMessage, setErrorMessage] = useState("");
+
   const handleInputChange = (name, newValue) => {
     setInputValues((prevValues) => ({
       ...prevValues,
-      [name]: newValue,
+      [name]: newValue.trimEnd(),
     }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addEmployee(inputValues));
-    console.log(inputValues);
-    console.log(employees);
+    if (isFormValid()) {
+      setErrorMessage("");
+      dispatch(addEmployee(inputValues));
+      window.location.reload(false);
+    } else {
+      setErrorMessage("Please fill out all fields");
+    }
   };
+
+  const isFormValid = () => {
+    return Object.values(inputValues).every((value) => value.trim() !== "");
+  };
+
 
   return (
     <form className="form" onSubmit={handleSubmit}>
       <Input
         label="First Name"
-        type="text"
         name="firstName"
         onInputChange={handleInputChange}
+        regularExpression={/^[a-zA-Z\s]*$/}
       />
       <Input
         label="Last Name"
-        type="text"
         name="lastName"
         onInputChange={handleInputChange}
+        regularExpression={/^[a-zA-Z\s]*$/}
       />
       <Input
         label="Date of Birth"
@@ -66,15 +74,15 @@ function Form() {
       />
       <Input
         label="Street"
-        type="text"
         name="street"
         onInputChange={handleInputChange}
+        regularExpression={/^[a-zA-Z0-9\s]*$/}
       />
       <Input
         label="City"
-        type="text"
         name="city"
         onInputChange={handleInputChange}
+        regularExpression={/^[a-zA-Z\s]*$/}
       />
       <Input
         label="State"
@@ -85,9 +93,9 @@ function Form() {
       />
       <Input
         label="Zip Code"
-        type="number"
         name="zipCode"
         onInputChange={handleInputChange}
+        regularExpression={/^[0-9]*$/}
       />
       <Input
         label="Department"
@@ -99,6 +107,7 @@ function Form() {
       <button type="submit" className="form-submit">
         Save
       </button>
+      {!isFormValid() && <p className="error-message">{errorMessage}</p>}
     </form>
   );
 }
