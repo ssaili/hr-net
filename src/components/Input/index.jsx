@@ -4,7 +4,14 @@ import "react-datepicker/dist/react-datepicker.css";
 import Select from "react-select";
 import "./style.scss";
 
-function Input({ label, type, name, options, onInputChange, regularExpression }) {
+function Input({
+  label,
+  type,
+  name,
+  options,
+  onInputChange,
+  regularExpression,
+}) {
   const [inputValue, setInputValue] = useState(getInitialValue(type));
   const [isValid, setIsValid] = useState(true);
 
@@ -19,7 +26,7 @@ function Input({ label, type, name, options, onInputChange, regularExpression })
   }, [isValid]);
 
   function firstLetterToUppercase(str) {
-    return (str.charAt(0).toUpperCase() + str.slice(1));
+    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
   const handleChange = (event) => {
@@ -52,7 +59,10 @@ function Input({ label, type, name, options, onInputChange, regularExpression })
         break;
       default:
         if (event?.target) {
-          const inputValue = firstLetterToUppercase(event.target.value).trimStart().split(/[\s,\t,\n]+/).join(' ');
+          const inputValue = firstLetterToUppercase(event.target.value)
+            .trimStart()
+            .split(/[\s,\t,\n]+/)
+            .join(" ");
           updateInputValue(inputValue);
         }
         break;
@@ -107,7 +117,11 @@ function Input({ label, type, name, options, onInputChange, regularExpression })
               value={inputValue}
               onChange={handleChange}
             />
-            {!isValid && <span className="error-message">This character is not allowed.</span>}
+            {!isValid && (
+              <span className="error-message">
+                This character is not allowed.
+              </span>
+            )}
           </div>
         );
     }

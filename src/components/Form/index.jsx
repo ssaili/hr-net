@@ -45,7 +45,6 @@ function Form() {
     return Object.values(inputValues).every((value) => value.trim() !== "");
   };
 
-
   return (
     <form className="form" onSubmit={handleSubmit}>
       <Input

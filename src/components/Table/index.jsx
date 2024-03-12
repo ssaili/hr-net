@@ -3,7 +3,7 @@ import {
   useMaterialReactTable,
 } from "material-react-table";
 
-function Table({tableColumns, tableData}) {
+function Table({ tableColumns, tableData }) {
   const columns = tableColumns;
 
   const data = tableData;
