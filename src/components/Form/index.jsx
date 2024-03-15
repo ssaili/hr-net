@@ -117,8 +117,7 @@ function Form() {
         isOpen={isOpen}
         onClose={() => window.location.reload(false)}
         modalWidth={"300px"}
-        modalBackgroundColor={"white"}
-        modalTitle={"Employee Added"}
+        modalTitle={"Employee Created !"}
         modalTitleFontSize={"20px"}
         modalTitleFontWeight={"normal"}
         closeButtonColor={"#1669c4"}
