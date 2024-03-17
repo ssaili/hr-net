@@ -85,8 +85,11 @@ function Input({
       case "date":
         return (
           <div className="date-container">
-            <label className="date-label">{label}</label>
+            <label className="date-label" htmlFor={label}>
+              {label}
+            </label>
             <DatePicker
+              id={label}
               placeholderText="Select a date"
               className="date-field"
               onChange={handleChange}
@@ -97,8 +100,11 @@ function Input({
       case "select":
         return (
           <div className="select-container">
-            <label className="select-label">{label}</label>
+            <label className="select-label" htmlFor={label}>
+              {label}
+            </label>
             <Select
+              id={label}
               className="select-field"
               classNamePrefix="select"
               defaultValue={inputValue}
@@ -110,8 +116,11 @@ function Input({
       default:
         return (
           <div className="input-container">
-            <label className="input-label">{label}</label>
+            <label className="input-label" htmlFor={label}>
+              {label}
+            </label>
             <input
+              id={label}
               className="input-field"
               type={type}
               value={inputValue}
