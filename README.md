@@ -5,7 +5,7 @@ Ce dépôt contient la conversion de l'application web interne HRnet de WealthHe
 - Dépôt d'origine d'HRnet en jQuery : [HRnet jQuery](https://github.com/OpenClassrooms-Student-Center/P12_Front-end)
 - Plugin jQuery Modal d'origine : [jquery-modal](https://github.com/kylefox/jquery-modal)
 - Plugin Modal converti en React : [react-minimalist-modal](https://github.com/ssaili/react-minimalist-modal)
-- 
+  
 ## 💻 Technologies Utilisées
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![Sass](https://img.shields.io/badge/sass-%23CC6699.svg?style=for-the-badge&logo=sass&logoColor=white)
